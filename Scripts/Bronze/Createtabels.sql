@@ -1,5 +1,6 @@
-
-
+IF OBJECT_ID('Bronze.crm_cust_info', 'U') IS NOT NULL
+    DROP TABLE Bronze.crm_cust_info;
+GO
 
 CREATE TABLE Bronze.crm_cust_info (
     cst_id              INT,
@@ -11,7 +12,9 @@ CREATE TABLE Bronze.crm_cust_info (
     cst_create_date     DATE
 );
 
-
+IF OBJECT_ID('Bronze.crm_prd_info', 'U') IS NOT NULL
+    DROP TABLE Bronze.crm_prd_info;
+GO
 
 CREATE TABLE Bronze.crm_prd_info (
     prd_id       INT,
@@ -23,7 +26,9 @@ CREATE TABLE Bronze.crm_prd_info (
     prd_end_dt   DATETIME
 );
 
-
+IF OBJECT_ID('Bronze.crm_sales_details', 'U') IS NOT NULL
+    DROP TABLE Bronze.crm_sales_details;
+GO
 
 CREATE TABLE Bronze.crm_sales_details (
     sls_ord_num  NVARCHAR(50),
@@ -37,14 +42,18 @@ CREATE TABLE Bronze.crm_sales_details (
     sls_price    INT
 );
 
-
+IF OBJECT_ID('Bronze.erp_loc_a101', 'U') IS NOT NULL
+    DROP TABLE Bronze.erp_loc_a101;
+GO
 
 CREATE TABLE Bronze.erp_loc_a101 (
     cid    NVARCHAR(50),
     cntry  NVARCHAR(50)
 );
 
-
+IF OBJECT_ID('Bronze.erp_cust_az12', 'U') IS NOT NULL
+    DROP TABLE Bronze.erp_cust_az12;
+GO
 
 CREATE TABLE Bronze.erp_cust_az12 (
     cid    NVARCHAR(50),
@@ -52,7 +61,9 @@ CREATE TABLE Bronze.erp_cust_az12 (
     gen    NVARCHAR(50)
 );
 
-
+IF OBJECT_ID('Bronze.erp_px_cat_g1v2', 'U') IS NOT NULL
+    DROP TABLE Bronze.erp_px_cat_g1v2;
+GO
 
 CREATE TABLE Bronze.erp_px_cat_g1v2 (
     id           NVARCHAR(50),
